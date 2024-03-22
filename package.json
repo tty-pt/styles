@@ -1,12 +1,12 @@
 {
   "name": "@tty-pt/styles",
-  "version": "0.3.15",
+  "version": "0.3.20",
   "description": "let your components know about your app's styling preferences, use less local styles",
-  "main": "dist/styles.cjs.js",
-  "browser": "dist/styles.web.js",
-  "module": "dist/styles.js",
+  "main": "cjs/styles.js",
+  "browser": "web/styles.js",
+  "module": "esm/styles.js",
   "entry": "./src/styles.tsx",
-  "types": "./dist/styles.d.ts",
+  "types": "types/styles.d.ts",
   "library": "ttyStyles",
   "external": {
     "@tty-pt/sub": "global ttySub",
@@ -14,21 +14,21 @@
     "lodash": "_"
   },
   "scripts": {
-    "build": "tsc && scripts build",
+    "build": "scripts build",
     "lint": "scripts lint",
     "watch": "scripts watch"
   },
   "author": "",
   "license": "BSD-2-Clause",
   "peerDependencies": {
-    "@tty-pt/sub": "^2.2.16",
+    "@tty-pt/sub": "^2.2.24",
     "deepmerge": "^4.3.1",
     "react": ">= 16.0.0 < 20.0.0",
     "react-dom": ">= 16.0.0 < 20.0.0"
   },
   "devDependencies": {
-    "@tty-pt/scripts": "^0.6.0-9",
-    "@tty-pt/sub": "^2.2.16",
+    "@tty-pt/scripts": "^0.6.0-19",
+    "@tty-pt/sub": "^2.2.24",
     "@types/node": "^20.11.7",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
@@ -39,6 +39,9 @@
     "typescript": "^5.3.2"
   },
   "files": [
-    "dist"
+    "cjs",
+    "web",
+    "esm",
+    "types"
   ]
 }
